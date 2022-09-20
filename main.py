@@ -269,11 +269,8 @@ def get_httprobe(domains_out):
                         print(f"{bcolors.OKCYAN}[Sub-Domain]{bcolors.ENDC} {bcolors.OKBLUE}[Alive] {bcolors.ENDC}" + str(sub).strip("\n"))
                 else:
                     print(f"{bcolors.WARNING}[!]{bcolors.ENDC} {len(reader)} Sub-Domains Alive.")
+                    exit(1)
             handle.close()
-            exit(1)
-        else:
-            print(f"{bcolors.WARNING}[!]{bcolors.ENDC} No Sub-Domains ALive.")
-            exit(1)
     except Exception as err:
         print(err)
         exit(1)
