@@ -270,6 +270,7 @@ def get_httprobe(domains_out):
                 else:
                     print(f"{bcolors.WARNING}[!]{bcolors.ENDC} {len(reader)} Sub-Domains Alive.")
             handle.close()
+            exit(1)
         else:
             print(f"{bcolors.WARNING}[!]{bcolors.ENDC} No Sub-Domains ALive.")
             exit(1)
